@@ -4,8 +4,7 @@ FROM ubuntu:18.04
  
 #for non interactive sessions 
 ENV DEBIAN_FRONTEND noninteractive
-ENV Username harsh.vashisth
-ENV Password 8130817276
+
 # Update the repository sources list
 RUN apt-get update && apt-get -y dist-upgrade
 # Install utils
