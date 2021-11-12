@@ -1,5 +1,5 @@
 <?php
-/*
+/* testing purpose 
 function sum($a,$b)//function with the use of parameters
 {
 	 echo $a+$b;
