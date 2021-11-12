@@ -4,6 +4,11 @@ FROM ubuntu:18.04
  
 #for non interactive sessions 
 ENV DEBIAN_FRONTEND noninteractive
+ENV username="harsh.vashisth"
+ENV password="8130817276"
+
+ENV BRANCH_NAME="nidm_upgraded"
+ENV GIT_URL="https://gitlab.ballisticlearning.com/nidm/nidm.git"
 
 # Update the repository sources list
 RUN apt-get update && apt-get -y dist-upgrade
@@ -16,7 +21,7 @@ RUN chmod -R 0777 /var/www/moodledata
 # Git installstion
 RUN apt install -y git
 # Clone a repository
-RUN git clone git@gitlab.ballisticlearning.com:nidm/nidm.git
+RUN git clone -b ${BRANCH_NAME} ${GIT_URL}
 COPY config.php /var/www/html/
 # Move the repo to desired location
 RUN mv moodle /var/www/html/
