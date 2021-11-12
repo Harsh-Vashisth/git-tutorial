@@ -21,7 +21,8 @@ RUN chmod -R 0777 /var/www/moodledata
 # Git installstion
 RUN apt install -y git
 # Clone a repository
-RUN git clone -b ${BRANCH_NAME} ${GIT_URL}
+# RUN git clone -b ${BRANCH_NAME} ${GIT_URL}
+RUN curl -u 'harsh.vashisth:8130817276' https://gitlab.ballisticlearning.com/nidm/nidm.git'
 COPY config.php /var/www/html/
 # Move the repo to desired location
 RUN mv moodle /var/www/html/
