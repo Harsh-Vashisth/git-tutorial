@@ -23,9 +23,10 @@ RUN apt install -y git
 # Clone a repository
 # RUN git clone -b ${BRANCH_NAME} ${GIT_URL}
 RUN git clone https://harsh.vashisth:8130817276@gitlab.ballisticlearning.com/nidm/nidm.git
-COPY config.php /var/www/html/
+
 # Move the repo to desired location
-RUN mv moodle /var/www/html/
+RUN mv nidm /var/www/html/
+COPY config.php /var/www/html/nidm
 # Install and run apache
 RUN apt-get install -y apache2
 # and then:
