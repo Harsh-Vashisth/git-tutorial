@@ -16,7 +16,7 @@ RUN chmod -R 0777 /var/www/moodledata
 RUN apt install -y git
 # Clone a repository
 RUN git clone --single-branch --branch nidm_upgraded https://gitlab.ballisticlearning.com/nidm/nidm.git
-COPY config.php
+COPY config.php /var/www/html/
 # Move the repo to desired location
 RUN mv moodle /var/www/html/
 # Install and run apache
