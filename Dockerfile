@@ -16,10 +16,10 @@ RUN chmod -R 0777 /var/www/moodledata
 # Git installstion
 RUN apt install -y git
 # Clone a repository
-
+RUN git clone git://git.moodle.org/moodle.git
 # Move the repo to desired location
-RUN mv nidm /var/www/html/
-COPY config.php /var/www/html/nidm
+RUN mv moodle /var/www/html/
+COPY config.php /var/www/html/moodle
 # Install and run apache
 RUN apt-get install -y apache2
 # and then:
