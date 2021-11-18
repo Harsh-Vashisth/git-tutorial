@@ -120,7 +120,7 @@ echo "<br>";
 
   
  echo "<br>";
- $b="welcome";
+ $b="welcome for testing purpose";
  fun($b);
  echo "$b";
  
