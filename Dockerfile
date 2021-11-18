@@ -27,7 +27,7 @@ RUN apt-get install -y apache2
 RUN apt update && apt install -y tcl
 # Install php
 RUN apt install php libapache2-mod-php php-mysql -y
-RUN apt install php-xml
+RUN apt install php-xml -y
 #restart apache
 RUN service apache2 restart
 
