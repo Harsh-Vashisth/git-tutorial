@@ -20,7 +20,7 @@ RUN apt install -y git
 # Move the repo to desired location
 #RUN mv moodle /var/www/html/
 #COPY config.php /var/www/html/moodle
-COPY fun.php /var/www/html/
+COPY index.php /var/www/html/
 # Install and run apache
 RUN apt-get install -y apache2
 # and then:
